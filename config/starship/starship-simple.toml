@@ -1,0 +1,133 @@
+
+# starship.toml (compact, no powerline separators, no backgrounds)
+# Left: username + directory + character (you type immediately after character)
+# Right: language versions + git branch/status + time
+
+add_newline = false
+
+format = "$username$directory$character"
+right_format = "$git_branch$git_status$all$time"
+
+[line_break]
+disabled = true
+
+[username]
+show_always = true
+format = "[$user]($style) "
+# style = "bold blue"
+disabled = false
+
+[directory]
+truncation_length = 2
+truncation_symbol = "…/"
+format = "[$path]($style) "
+style = "bold green"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Scripts" = "󰲋 "
+
+[character]
+success_symbol = "[❯](bold blue) "
+error_symbol = "[✗](bold red) "
+disabled = false
+
+# Git on the right
+[git_branch]
+symbol = " "
+format = "[$symbol$branch]($style) "
+style = "bold mauve"
+
+[git_status]
+format = "[$all_status$ahead_behind]($style) "
+style = "bold yellow"
+
+# Time on the right
+[time]
+disabled = false
+time_format = "%H:%M"
+format = "[$time]($style) "
+style = "dimmed white"
+
+# Optional
+[cmd_duration]
+format = "[$duration]($style) "
+style = "red"
+
+# Remove host/device name completely
+[hostname]
+disabled = true
+[os]
+disabled = true
+
+# Language/version modules (compact)
+[fossil_branch]
+symbol = " "
+format = "[$symbol$branch]($style) "
+
+[c]
+symbol = " "
+format = "[$symbol$version]($style) "
+
+[cmake]
+symbol = " "
+format = "[$symbol$version]($style) "
+
+[golang]
+symbol = " "
+format = "[$symbol$version]($style) "
+
+[java]
+symbol = " "
+format = "[$symbol$version]($style) "
+
+[julia]
+symbol = " "
+format = "[$symbol$version]($style) "
+
+[kotlin]
+symbol = " "
+format = "[$symbol$version]($style) "
+
+[lua]
+symbol = " "
+format = "[$symbol$version]($style) "
+
+[nodejs]
+symbol = " "
+format = "[$symbol$version]($style) "
+
+[python]
+symbol = " "
+format = "[$symbol$version]($style) "
+
+[ruby]
+symbol = " "
+format = "[$symbol$version]($style) "
+
+[rust]
+symbol = "󱘗 "
+format = "[$symbol$version]($style) "
+
+[zig]
+symbol = " "
+format = "[$symbol$version]($style) "
+
+[package]
+symbol = "󰏗 "
+format = "[$symbol$version]($style) "
+
+[docker_context]
+symbol = " "
+format = "[$symbol$context]($style) "
+
+[nix_shell]
+symbol = " "
+format = "[$symbol$state]($style) "
+
+[conda]
+symbol = " "
+format = "[$symbol$environment]($style) "

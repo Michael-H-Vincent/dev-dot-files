@@ -1,0 +1,136 @@
+
+"$schema" = "https://starship.rs/config-schema.json"
+
+add_newline = true
+
+# Two-line prompt with right-aligned time on every prompt render.
+# Colors use your Catppuccin terminal palette by naming common Catppuccin color keys.
+# If your terminal theme doesn't map these names, swap them to basic names (red/green/blue/etc).
+
+format = """
+[╭─](fg:green)$username$directory$git_branch$git_status$cmd_duration$fill$time$all
+[╰─](fg:green)$character$status$sudo
+"""
+
+[fill]
+symbol = " "
+
+[line_break]
+disabled = true
+
+
+# ------------------------------------------
+# Left side time (keep it compact)
+# ------------------------------------------
+
+[time]
+disabled = false
+time_format = "%H:%M"
+format = "[$time](fg:#94e2d5) "
+
+
+# ------------------------------------------
+# Left side modules
+# ------------------------------------------
+
+[username]
+show_always = true
+format = "[$user](fg:blue) "
+
+[directory]
+truncate_to_repo = false
+truncation_length = 2
+truncation_symbol = "../"
+read_only = " "
+format = "[$path](fg:yellow) "
+home_symbol = "/home/michael"
+
+[git_branch]
+symbol = " "
+format = "[$symbol$branch(:$remote_branch)](fg:purple) "
+
+[git_status]
+format = "[$all_status$ahead_behind](fg:#fab388) "
+
+[cmd_duration]
+format = "[ $duration](fg:yellow) "
+show_milliseconds = true
+
+# ------------------------------------------
+# Prompt line / status
+# ------------------------------------------
+
+[character]
+success_symbol = "[](fg:green) "
+error_symbol = "[](fg:red) "
+
+[status]
+disabled = false
+format = "[$status](fg:red) "
+
+[sudo]
+disabled = false
+format = "[ sudo:](fg:red) "
+
+# ------------------------------------------
+# Languages / toolchains (appear via $all)
+# ------------------------------------------
+
+[c]
+symbol = " "
+format = "[$symbol$version](fg:blue) "
+version_format = "v${major}.${minor}"
+
+[cpp]
+symbol = " "
+format = "[$symbol$version](fg:blue) "
+version_format = "v${major}.${minor}"
+
+[docker_context]
+format = "[ $context](fg:teal) "
+
+[dotnet]
+format = "[ $version](fg:blue) "
+version_format = "v${major}.${minor}"
+
+[golang]
+symbol = " "
+format = "[$symbol$version](fg:teal) "
+version_format = "v${major}.${minor}"
+
+[gradle]
+symbol = " "
+format = "[$symbol$version](fg:green) "
+version_format = "v${major}.${minor}"
+
+[java]
+symbol = " "
+format = "[$symbol$version](fg:red) "
+version_format = "v${major}.${minor}"
+
+[lua]
+symbol = " "
+format = "[$symbol$version](fg:yellow) "
+version_format = "v${major}.${minor}"
+
+[nodejs]
+symbol = " "
+format = "[$symbol$version](fg:green) "
+version_format = "v${major}.${minor}"
+
+[pulumi]
+format = "[󰆦 ($username@)$stack](fg:yellow) "
+
+[python]
+symbol = " "
+format = "[$symbol$pyenv_prefix($version )(($virtualenv) )](fg:green) "
+version_format = "v${major}.${minor}"
+
+[rust]
+symbol = "󱘗 "
+format = "[$symbol$version](fg:peach) "
+version_format = "v${major}.${minor}"
+
+[terraform]
+symbol = "󰆩 "
+format = "[$symbol$workspace](fg:purple) "

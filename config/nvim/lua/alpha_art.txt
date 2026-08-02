@@ -1,0 +1,88 @@
+
+        require("alpha").setup(applyColors({
+            [[███████╗    ██████╗ ]],
+            [[██╔════╝    ██╔═══╝ ]],
+            [[█████╗      ██████╗ ]],
+            [[██╔══╝      ██╔═══╝ ]],
+            [[███████╗    ██║     ]],
+            [[╚══════╝    ╚═╝     ]],
+            [[N  E  O  V  I  M    ]],
+        }, {
+                ["a"] = { fg = color9, ctermfg = 33},
+                ["b"] = { fg = color3, ctermfg = 33},
+                ["c"] = { fg = color4, ctermfg = 33},
+                ["d"] = { fg = color5, ctermfg = 33},
+                ["e"] = { fg = color6, ctermfg = 33},
+            }, {
+                [[bbbbbbba    cccccca ]],
+                [[bbaaaaaa    ccaaaaa ]],
+                [[bbbbba      cccccca ]],
+                [[bbaaaa      ccaaaaa ]],
+                [[bbbbbbba    cca     ]],
+                [[aaaaaaaa    aaa     ]],
+                [[d  d  d  e  e  e    ]],
+            }))
+
+
+                                                                                                                                    
+                                                                                                                                    
+        require("alpha").setup(applyColors({
+
+[[ ░▒▓██████▓▒░ ░▒▓██████▓▒░       ░▒▓████████▓▒░▒▓██████▓▒░        ░▒▓███████▓▒░▒▓█▓▒░      ░▒▓████████▓▒░▒▓████████▓▒░▒▓███████▓▒░  ]],
+[[░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░         ░▒▓█▓▒░  ░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ ]],
+[[░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░         ░▒▓█▓▒░  ░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ ]],
+[[░▒▓█▓▒▒▓███▓▒░▒▓█▓▒░░▒▓█▓▒░         ░▒▓█▓▒░  ░▒▓█▓▒░░▒▓█▓▒░       ░▒▓██████▓▒░░▒▓█▓▒░      ░▒▓██████▓▒░ ░▒▓██████▓▒░ ░▒▓███████▓▒░  ]],
+[[░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░         ░▒▓█▓▒░  ░▒▓█▓▒░░▒▓█▓▒░             ░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░        ]],
+[[░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░         ░▒▓█▓▒░  ░▒▓█▓▒░░▒▓█▓▒░             ░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░        ]],
+[[ ░▒▓██████▓▒░ ░▒▓██████▓▒░          ░▒▓█▓▒░   ░▒▓██████▓▒░       ░▒▓███████▓▒░░▒▓████████▓▒░▒▓████████▓▒░▒▓████████▓▒░▒▓█▓▒░        ]],
+        }, {
+                ["a"] = { fg = color9, ctermfg = 33},
+                ["b"] = { fg = color3, ctermfg = 33},
+                ["c"] = { fg = color4, ctermfg = 33},
+                ["d"] = { fg = color5, ctermfg = 33},
+                ["e"] = { fg = color6, ctermfg = 33},
+            }, {
+
+[[ bbbbbbbbbbbb bbbbbbbbbbbb       bbbbbbbbbbbbbbbbbbbbbbbbb        bbbbbbbbbbbbbbbbbbb      bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb  ]],
+[[bbbbbbbbbbbbbbbbbbbbbbbbbbb         bbbbbbb  bbbbbbbbbbbbbb      bbbbbbb      bbbbbbb      bbbbbbb      bbbbbbb      bbbbbbbbbbbbbb ]],
+[[bbbbbbb      bbbbbbbbbbbbbb         bbbbbbb  bbbbbbbbbbbbbb      bbbbbbb      bbbbbbb      bbbbbbb      bbbbbbb      bbbbbbbbbbbbbb ]],
+[[bbbbbbbbbbbbbbbbbbbbbbbbbbb         bbbbbbb  bbbbbbbbbbbbbb       bbbbbbbbbbbbbbbbbbb      bbbbbbbbbbbb bbbbbbbbbbbb bbbbbbbbbbbbb  ]],
+[[bbbbbbbbbbbbbbbbbbbbbbbbbbb         bbbbbbb  bbbbbbbbbbbbbb             bbbbbbbbbbbbb      bbbbbbb      bbbbbbb      bbbbbbb        ]],
+[[bbbbbbbbbbbbbbbbbbbbbbbbbbb         bbbbbbb  bbbbbbbbbbbbbb             bbbbbbbbbbbbb      bbbbbbb      bbbbbbb      bbbbbbb        ]],
+[[ bbbbbbbbbbbb bbbbbbbbbbbb          bbbbbbb   bbbbbbbbbbbb       bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb        ]],
+            }))
+
+[[███╗   ███╗██╗   ██╗██╗███╗   ██╗]],
+[[████╗ ████║██║   ██║██║████╗  ██║]],
+[[██╔████╔██║██║   ██║██║██╔██╗ ██║]],
+[[██║╚██╔╝██║╚██╗ ██╔╝██║██║╚██╗██║]],
+[[██║ ╚═╝ ██║ ╚████╔╝ ██║██║ ╚████║]],
+[[╚═╝     ╚═╝  ╚═══╝  ╚═╝╚═╝  ╚═══╝]],
+                                 
+
+
+        require("alpha").setup(applyColors({
+[[███╗   ███╗██╗   ██╗██╗███╗   ██╗]],
+[[████╗ ████║██║   ██║██║████╗  ██║]],
+[[██╔████╔██║██║   ██║██║██╔██╗ ██║]],
+[[██║╚██╔╝██║╚██╗ ██╔╝██║██║╚██╗██║]],
+[[██║ ╚═╝ ██║ ╚████╔╝ ██║██║ ╚████║]],
+[[╚═╝     ╚═╝  ╚═══╝  ╚═╝╚═╝  ╚═══╝]],
+[[           N E O V I M           ]],
+        }, {
+                ["a"] = { fg = color9, ctermfg = 33},
+                ["b"] = { fg = color3, ctermfg = 33},
+                ["c"] = { fg = color4, ctermfg = 33},
+                ["d"] = { fg = color5, ctermfg = 33},
+                ["e"] = { fg = color6, ctermfg = 33},
+            }, {
+
+[[bbba   bbbabba   bbabbabbba   bba]],
+[[bbbba bbbbabba   bbabbabbbba  bba]],
+[[bbabbbbabbabba   bbabbabbabba bba]],
+[[bbaabbaabbaabba bbaabbabbaabbabba]],
+[[bba aaa bba abbbbaa bbabba abbbba]],
+[[aaa     aaa  aaaaa  aaaaaa  aaaaa]],
+[[           c c c d d d           ]],
+            }))
+

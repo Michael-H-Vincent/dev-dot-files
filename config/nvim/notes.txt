@@ -1,0 +1,73 @@
+Record of my custom keybinds/useful motions:
+
+
+
+Custom Keybinds:
+
+    
+    These are my custom keybinds for normal neovim features.
+
+        <Space>w    - Write to file.
+        <Space>q    - Quit current editor.
+
+        jj          - Return to normal mode from insert.
+        <Space>n    - Cycle to prev buffer.
+        <Space>m    - Cycle to next buffer.
+		<Space>u    - Close current buffer.
+        <Space>e    - Pop up error message. 
+
+        <ALT>h    - Focus on left window.
+        <ALT>l    - Focus on right window.
+        <ALT>k    - Focus on up window.
+        <ALT>j    - Focus on down window.
+
+
+	These are binds for important plugins:
+
+        <Space>ll   `:VimtexCompile`           (toggle compile)
+        <Space>lv   `:VimtexView`              (view PDF)
+        <Space>le   `:VimtexErrors`            (show errors)
+        <Space>lo   `:VimtexCompileOutput`     (output log)
+        <Space>lk   `:VimtexStop`              (stop compile)
+        <Space>lc   `:VimtexClean`             (cleanup aux files)
+
+        <Space>hx   (toggles hexview)
+
+		<Space>o	(open file)
+		<Space>s	(live grep, across code base)
+		<Space>f	(fuzzy find)
+		<Space>g	(jump to defintion) --not working rn
+
+		gcc			(comments current line linewise) --in normal mode
+		gbc			(comments current line blockwise) --in normal
+
+		gc			(comments linewise) --in visual
+		gb			(comments blockwise) --in visual
+		
+Navigation Motions to remember: (i will delete and replace these once i have them down)
+
+        W (or W/E)  does the same thing as w/e/b but goes by spaces
+      
+        H (L/M)     move cursor to high, low, middle.
+        zt (zb/zz)  reposition cursor and keep line same
+
+        f{char}     find char on that line use ; to repeat (prolly wont use that part)
+        t{char}     ^same thing but one before that char 
+        /<pattern>      searches for that pattern use n/N for next/prev
+        :noh        gets ride of highlights from /pattern^
+
+        s       change character under cursor
+
+Useful motions:
+
+
+        :%s/old/new/gc      (does find and replace for whole file
+                             g means it does all instances on the
+                             line and c requires confirmation)
+
+        :.,$s/old/new/gc    (does find and replace from current line
+                             to end of file, same gc meanings)
+    
+        
+
+        
