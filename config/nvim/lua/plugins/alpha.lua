@@ -6,12 +6,36 @@ return {
 
     config = function()
         local dashboard = require("alpha.themes.dashboard")
-        vim.cmd("source ~/.cache/wal/colors-wal.vim")
-        local color9 = vim.g.color9 or "#ffffff"
-        local color3 = vim.g.color3 or "#ffffff"
-        local color4 = vim.g.color4 or "#ffffff"
-        local color5 = vim.g.color5 or "#ffffff"
-        local color6 = vim.g.color6 or "#ffffff"
+        -- Read only palette values; the rest of the editor keeps its own theme.
+        local function themeColors()
+            local path = vim.fn.expand("~/.local/state/omarchy/current/theme/colors.toml")
+            local palette = {}
+            if vim.fn.filereadable(path) == 1 then
+                for _, line in ipairs(vim.fn.readfile(path)) do
+                    local name, hex = line:match([=[^%s*([%w_]+)%s*=%s*["'](#%x%x%x%x%x%x)["']]=])
+                    if name then palette[name] = hex end
+                end
+            end
+            local normal = vim.api.nvim_get_hl(0, { name = "Normal", link = false })
+            local fallback = normal.fg and string.format("#%06x", normal.fg) or "#ffffff"
+            return {
+                a = { fg = palette.bright_red or palette.red or fallback },
+                b = { fg = palette.yellow or palette.accent or fallback },
+                c = { fg = palette.blue or fallback },
+                d = { fg = palette.magenta or fallback },
+                e = { fg = palette.cyan or fallback },
+            }, palette, fallback
+        end
+
+        local function refreshTheme()
+            local colors, palette, fallback = themeColors()
+            for name, color in pairs(colors) do
+                vim.api.nvim_set_hl(0, "Alpha" .. name, color)
+            end
+            vim.api.nvim_set_hl(0, "AlphaButtons", { fg = palette.foreground or fallback })
+            vim.api.nvim_set_hl(0, "AlphaShortcut", { fg = palette.accent or fallback })
+            vim.api.nvim_set_hl(0, "AlphaFooter", { fg = palette.muted or fallback })
+        end
 
         -- helper function for utf8 chars
         local function getCharLen(s, pos)
@@ -59,13 +83,7 @@ return {
 [[██║ ╚═╝ ██║ ╚████╔╝ ██║██║ ╚████║]],
 [[╚═╝     ╚═╝  ╚═══╝  ╚═╝╚═╝  ╚═══╝]],
 [[           N E O V I M           ]],
-        }, {
-                ["a"] = { fg = color9, ctermfg = 33},
-                ["b"] = { fg = color3, ctermfg = 33},
-                ["c"] = { fg = color4, ctermfg = 33},
-                ["d"] = { fg = color5, ctermfg = 33},
-                ["e"] = { fg = color6, ctermfg = 33},
-            }, {
+        }, themeColors(), {
 
 [[bbba   bbbabba   bbabbabbba   bba]],
 [[bbbba bbbbabba   bbabbabbbba  bba]],
@@ -89,6 +107,17 @@ return {
 
 
         }
+        for _, button in ipairs(dashboard.section.buttons.val) do
+            button.opts.hl = "AlphaButtons"
+            button.opts.hl_shortcut = "AlphaShortcut"
+        end
+        dashboard.section.footer.opts.hl = "AlphaFooter"
+        refreshTheme()
+        vim.api.nvim_create_autocmd({ "FocusGained", "ColorScheme", "BufEnter" }, {
+            group = vim.api.nvim_create_augroup("AlphaOmarchyTheme", { clear = true }),
+            callback = refreshTheme,
+        })
+
         dashboard.section.footer.val = {
             "",
             "Welcome!",
